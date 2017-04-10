@@ -1,0 +1,6 @@
+packages
+.idea
+.vs
+*.user
+Rowan/bin/
+Rowan/obj/
