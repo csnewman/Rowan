@@ -2,7 +2,7 @@
 
 namespace Rowan.Boot
 {
-    [StructLayout(LayoutKind.Sequential)]
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
     public struct Multiboot
     {
         public uint Flags;

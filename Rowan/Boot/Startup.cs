@@ -34,6 +34,31 @@ namespace Rowan.Boot
 
             //Exit if grub is missing
             if (!grubFound) return;
+
+            //Print memory sizes
+            BiosVideo.Print('M');
+            BiosVideo.Print('E');
+            BiosVideo.Print('M');
+            BiosVideo.Print(' ');
+            BiosVideo.Print('L');
+            BiosVideo.Print('O');
+            BiosVideo.Print('W');
+            BiosVideo.Print('E');
+            BiosVideo.Print('R');
+            BiosVideo.Print(':');
+            BiosVideo.Print(' ');
+            BiosVideo.Print((int) mboot->MemLower);
+            BiosVideo.Print(' ');
+            BiosVideo.Print('-');
+            BiosVideo.Print(' ');
+            BiosVideo.Print('U');
+            BiosVideo.Print('P');
+            BiosVideo.Print('P');
+            BiosVideo.Print('E');
+            BiosVideo.Print('R');
+            BiosVideo.Print(':');
+            BiosVideo.Print(' ');
+            BiosVideo.Print((int) mboot->MemUpper);
         }
     }
 }
