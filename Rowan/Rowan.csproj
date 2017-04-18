@@ -46,7 +46,7 @@
     <Compile Include="Boot\Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Video\BiosVideo.cs" />
-    <Compile Include="Video\VgaColor.cs" />
+    <Compile Include="Video\VgaColour.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

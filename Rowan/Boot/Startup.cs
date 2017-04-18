@@ -24,13 +24,13 @@ namespace Rowan.Boot
 
             //Print whether grub has been detected
             bool grubFound = magic == 0x2BADB002;
-            BiosVideo.SetColors(grubFound ? VgaColor.Green : VgaColor.Red, VgaColor.Black);
+            BiosVideo.SetColors(grubFound ? VgaColour.Green : VgaColour.Red, VgaColour.Black);
             BiosVideo.Print('G');
             BiosVideo.Print('R');
             BiosVideo.Print('U');
             BiosVideo.Print('B');
             BiosVideo.Print('\n');
-            BiosVideo.SetColors(VgaColor.White, VgaColor.Black);
+            BiosVideo.SetColors(VgaColour.White, VgaColour.Black);
 
             //Exit if grub is missing
             if (!grubFound) return;

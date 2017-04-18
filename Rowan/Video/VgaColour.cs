@@ -1,6 +1,6 @@
 ﻿namespace Rowan.Video
 {
-    public enum VgaColor
+    public enum VgaColour
     {
         Black = 0,
         Blue = 1,

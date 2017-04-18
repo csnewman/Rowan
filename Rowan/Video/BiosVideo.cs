@@ -4,12 +4,12 @@
     {
         public const int Width = 80, Height = 25;
         private static int _row, _column;
-        private static VgaColor _foreground, _background;
+        private static VgaColour _foreground, _background;
 
         public static void Init()
         {
             ClearScreen();
-            SetColors(VgaColor.White, VgaColor.Black);
+            SetColors(VgaColour.White, VgaColour.Black);
         }
 
         public static void ClearScreen()
@@ -20,7 +20,7 @@
             _column = 0;
         }
 
-        public static void SetColors(VgaColor foreground, VgaColor background)
+        public static void SetColors(VgaColour foreground, VgaColour background)
         {
             _foreground = foreground;
             _background = background;
@@ -102,13 +102,13 @@
             }
         }
 
-        public static void WriteAt(int pos, char c, VgaColor fore, VgaColor back)
+        public static void WriteAt(int pos, char c, VgaColour fore, VgaColour back)
         {
             *(byte*) (0xb8000 + pos*2) = (byte) c;
             *(byte*) (0xb8000 + pos*2 + 1) = (byte) ((int) fore | ((int) back << 4));
         }
 
-        public static void WriteAt(int x, int y, char c, VgaColor fore, VgaColor back)
+        public static void WriteAt(int x, int y, char c, VgaColour fore, VgaColour back)
         {
             if (x < 0 || x >= Width || y < 0 || y >= Width)
                 return;
